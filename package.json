@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.2.5",
     "@reduxjs/toolkit": "^2.2.6",
+    "cross-env": "^7.0.3",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
