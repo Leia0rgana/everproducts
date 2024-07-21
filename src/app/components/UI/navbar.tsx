@@ -32,14 +32,14 @@ function Navbar() {
 
     if (isClicked && pathname !== pathnameRef.current) {
       dispatch(toggleButton())
-      pathnameRef.current = pathname
     }
+    pathnameRef.current = pathname
 
     return () => window.removeEventListener('resize', handleResize)
   }, [pathname, dispatch, isClicked])
 
   return (
-    <nav className="flex flex-row justify-between items-center mt-10 mx-5 gap-5 xs:mb-0">
+    <nav className="flex flex-row justify-between items-center my-10 mx-5 gap-5">
       <Link href={'/'}>
         <Image
           src="/logo-header.svg"
