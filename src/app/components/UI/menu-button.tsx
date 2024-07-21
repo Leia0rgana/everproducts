@@ -11,9 +11,9 @@ function MenuButton() {
   return (
     <button onClick={() => dispatch(toggleButton())}>
       {isClicked ? (
-        <MdClose className="text-3xl hidden md:inline-block" />
+        <MdClose className="text-3xl text-slate-500 hidden md:inline-block hover:scale-105 transition-transform" />
       ) : (
-        <MdMenu className="text-3xl hidden md:inline-block" />
+        <MdMenu className="text-3xl text-slate-500 hidden md:inline-block hover:scale-105 transition-transform" />
       )}
     </button>
   )

@@ -18,6 +18,7 @@ const config: Config = {
     extend: {
       colors: {
         'bright-green': '#8BC53F',
+        'dark-blue': '#1B3070',
       },
     },
   },

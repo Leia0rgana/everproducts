@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
   @apply bg-slate-100;
 }
 h1 {
-  @apply text-5xl text-center font-semibold m-2 leading-relaxed xl:text-4xl xl:leading-relaxed xs:text-3xl xs:leading-relaxed;
+  @apply text-5xl text-left text-dark-blue lg:text-center font-semibold m-2 leading-relaxed xl:text-4xl xl:leading-relaxed xs:text-3xl xs:leading-relaxed;
 }
