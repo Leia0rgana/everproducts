@@ -1,8 +1,14 @@
+import { submitForm } from '@/actions/actions'
 import Link from 'next/link'
+import SubmitButton from './UI/submit-button'
 
 function ContactUsForm() {
   return (
-    <form className="flex flex-col text-dark-blue px-3 text-base focus:outline-none active:outline-none">
+    <form
+      action={submitForm}
+      id="contact"
+      className="flex flex-col text-dark-blue px-3 text-base focus:outline-none active:outline-none"
+    >
       <h2 className=" p-2">Напишите нам</h2>
       <div className="flex flex-col items-stretch p-2 gap-1 ">
         <label htmlFor="name" className="font-medium">
@@ -11,6 +17,7 @@ function ContactUsForm() {
         <input
           type="text"
           id="name"
+          name="name"
           required
           className="h-10 border border-dark-blue/30 rounded-sm p-2 focus:outline-none"
         />
@@ -22,6 +29,7 @@ function ContactUsForm() {
         <input
           type="email"
           id="email"
+          name="email"
           placeholder="default@example.com"
           required
           className="h-10 border border-dark-blue/30 rounded-sm p-2  focus:outline-none"
@@ -34,6 +42,7 @@ function ContactUsForm() {
         <input
           type="tel"
           id="number"
+          name="number"
           placeholder="+79999999999"
           className="h-10 border border-dark-blue/30 rounded-sm p-2  focus:outline-none"
         />
@@ -45,11 +54,12 @@ function ContactUsForm() {
         <input
           type="text"
           id="text"
+          name="text"
           className="h-10 border border-dark-blue/30 rounded-sm p-2  focus:outline-none"
         />
       </div>
       <div className="flex flex-row p-3 md:p-1">
-        <input type="checkbox" id="agreement" />
+        <input type="checkbox" id="agreement" name="agreement" required />
         <label htmlFor="agreement" className="pl-3 text-sm xs:text-xs">
           Я прочитал(а) и ознакомлен(а) с{' '}
           <Link
@@ -69,12 +79,7 @@ function ContactUsForm() {
           </Link>
         </label>
       </div>
-      <button
-        type="submit"
-        className="w-4/5 self-center border rounded-sm mt-2 mb-6 md:mb-4 p-4 bg-bright-green text-white font-medium uppercase hover:bg-[#75a334] hover:shadow-lg hover:scale-105 transition-transform"
-      >
-        Отправить
-      </button>
+      <SubmitButton />
     </form>
   )
 }
