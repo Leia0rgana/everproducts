@@ -46,7 +46,13 @@ function Products() {
         className="grid grid-cols-[repeat(3,_310px)] gap-8 mx-3 mb-8 justify-center xl:grid-cols-[repeat(3,_300px)] lg:grid-cols-[repeat(2,_330px)] lg:mt-12 md:grid-cols-[repeat(1,_350px)] xs:grid-cols-[repeat(1,300px)]"
       >
         {PRODUCTS.map((product) => (
-          <Card productInfo={product} key={product.title} />
+          <Link
+            href={`/products/${product.id}`}
+            key={product.id}
+            className="h-full"
+          >
+            <Card productInfo={product} />
+          </Link>
         ))}
       </div>
       <div className="border-t mx-5 mt-auto py-5 px-7 flex justify-center items-center gap-10">
