@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function Card({ productInfo }: { productInfo: IProduct }) {
   return (
-    <div className="flex flex-col p-3 bg-slate-50 border rounded-md hover:shadow-lg hover:scale-105 transition-transform">
+    <div className="flex flex-col h-full p-3 bg-slate-50 border rounded-md hover:shadow-lg hover:scale-105 transition-transform">
       <Image
         src={productInfo.image.src}
         alt={productInfo.image.alt}
