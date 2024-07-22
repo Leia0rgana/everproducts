@@ -1,5 +1,16 @@
 import Image from 'next/image'
 
+export function generateStaticParams() {
+  return [
+    { id: 'everchain-sdk' },
+    { id: 'evercode-online-medic' },
+    { id: 'evermarket' },
+    { id: 'wallet' },
+    { id: 'evercourse' },
+    { id: 'evervault' },
+  ]
+}
+
 function Product() {
   return (
     <main className="flex flex-col max-w-[1000px] my-0 mx-auto gap-10 mb-10">
